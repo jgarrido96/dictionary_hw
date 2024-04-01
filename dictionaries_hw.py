@@ -28,11 +28,11 @@ hotel_rooms = {
     "102": {"status": "booked", "customer": "John Doe"}
 }
 
-# username = input("Welcome to JDoggs Slee-Zzz Inn! Please provide a name for your Slee-Zzz experience. ")
+username = input("Welcome to JDoggs Slee-Zzz Inn! Please provide a name for your Slee-Zzz experience: ")
 
 def jdogg_inn():
     while True:
-        user_input = input(f"\nWelcome {username}! What would you like to do today?\nTo book a room, type 'book'.\nTo check-out, type 'out'.\nTo check availability, type 'vacancy'.\nTo quit, type 'quit'.\n")
+        user_input = input(f"\nHello {username}! What would you like to do today?\nTo book a room, type 'book'.\nTo check-out, type 'out'.\nTo check availability, type 'vacancy'.\nTo quit, type 'quit'.\n")
         if user_input == 'quit':
             break
         elif user_input == 'book':
@@ -63,32 +63,32 @@ def jdogg_inn():
         else:
             print("Sorry! That's an invalid input!")
 
-# jdogg_inn()
+jdogg_inn()
 
 # Task 2: E-Commerce Product Search Feature
 
 
-# def search_nested_dict(dictionary, value):
-#     for k, v in dictionary.items():
-#         if dictionary[k]['name'] == value:
-#             return v
-#     return None
+def search_nested_dict(dictionary, value):
+    for k, v in dictionary.items():
+        if dictionary[k]['name'] == value:
+            return v
+    return None
 
-# products = {
-#     "1": {"name": "Laptop", "category": "Electronics", "price": 800},
-#     "2": {"name": "Shirt", "category": "Clothing", "price": 20},
-#     "3": {"name": "Shoe", "category": "Clothing", "price": 40},
-#     "4": {"name": "Chair", "category": "Office", "price": 85}
-# }
-# while True:
-#     value_to_search = input("Welcome to this super powerful search engine! Enter your search here! Type 'quit' to quit. ")
-#     if value_to_search == 'quit':
-#         break
-#     result = search_nested_dict(products, value_to_search)
-#     if result is not None:
-#         print(f"Value for key '{value_to_search}': {result}")
-#     else:
-#         print(f"Search for '{value_to_search}' retuned no results.")
+products = {
+    "1": {"name": "Laptop", "category": "Electronics", "price": 800},
+    "2": {"name": "Shirt", "category": "Clothing", "price": 20},
+    "3": {"name": "Shoe", "category": "Clothing", "price": 40},
+    "4": {"name": "Chair", "category": "Office", "price": 85}
+}
+while True:
+    value_to_search = input("Welcome to this super powerful search engine! Enter your search here! Type 'quit' to quit. ")
+    if value_to_search == 'quit':
+        break
+    result = search_nested_dict(products, value_to_search)
+    if result is not None:
+        print(f"Value for key '{value_to_search}': {result}")
+    else:
+        print(f"Search for '{value_to_search}' retuned no results.")
 
 
 # 3. Python Programming Challenges for Customer Service Data Handling
